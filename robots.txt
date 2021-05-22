@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /example-subfolder/
+
+User-agent: Googlebot
+Disallow: /example-subfolder/
+
+sitemap:https://www.justiexpress.com/sitemap.xml

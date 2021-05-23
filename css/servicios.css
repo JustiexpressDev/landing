@@ -103,11 +103,10 @@ body {
 }
 
 .btn-whatsapp {
-        position: fixed;
-        bottom:15px;
-        right: auto;
-        padding-left: 10px;
-        z-index:999;
+  position: fixed;
+  bottom:30px;
+  right: auto;
+  padding-left: 10px;
 }
 
 .section-title-tyc {

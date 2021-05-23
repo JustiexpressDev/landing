@@ -104,9 +104,9 @@ body {
 
 .btn-whatsapp {
   position: fixed;
-  bottom:30px;
-  right: auto;
+  bottom: 50px;
   padding-left: 10px;
+  display: flex;
 }
 
 .section-title-tyc {

@@ -77,6 +77,7 @@ body {
 
 .modal-dialog{
         position: auto;
+        size: 300px;
         }
 
 .modal-content{
@@ -303,9 +304,19 @@ h1, h2, h3, h4, h5, h6 {
 	  color: #fff;
 	}
 
+  #hero .btn-services1 {
+	  border: 2px solid #fff;
+	  color: #fff;
+	}
+
 
 	#hero .btn-services:hover {
 	  background: #03C4EB;
+	  border: 2px solid #03C4EB;
+	}
+
+  #hero .btn-services1:hover {
+	  background: #0c0d0e;
 	  border: 2px solid #03C4EB;
 	}
 

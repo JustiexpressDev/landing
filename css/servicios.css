@@ -11,6 +11,17 @@ body {
     width: 100%
 }
 
+
+.btn-services2 {
+  background: #76B3FA;
+  border-radius: 100px;
+  padding: 20px 20px;
+  color: #fff;
+  font-size: 1.45em;
+  margin: 0 15px;
+  display: inline-block;
+}
+
 .icon-bar {
   position: fixed;
   top: 50%;
@@ -290,6 +301,7 @@ h1, h2, h3, h4, h5, h6 {
 	  background: #03C4EB;
 	  border: 2px solid #03C4EB;
 	}
+  
 
   /*--------------------------------------------------------------
   # Header

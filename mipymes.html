@@ -111,27 +111,6 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-  <!-- recaptcha -->
-
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <script>
-  function timestamp() {
-  var response = document.getElementById("g-recaptcha-response");
-  if (response == null || response.value.trim() == "")
-  {
-  var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
-  elems["ts"] = JSON.stringify(new Date().getTime());
-  document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
-  }
-  }
-  setInterval(timestamp, 500);
-  </script>
-  <script type="text/javascript">
-  function recaptcha_callback(){
-  $('.button').prop("disabled", false);
-  }
-  </script>
-
   <!-- Modal -->
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -160,6 +139,14 @@
 
 <body>
 
+  <div class="icon-bar">
+    <a  target="_blank" href="https://es-la.facebook.com/pages/category/Legal-Service/Justiexpress-360447324755280/" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a  target="_blank" href="https://twitter.com/justiexpress?lang=es" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a  target="_blank" href="https://www.linkedin.com/company/justiexpress" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a  target="_blank" href="https://www.instagram.com/justiexpress.derechoyeconomia/" class="instagram"><i class="fa fa-instagram"></i></a>
+    <a  target="_blank" href="https://www.youtube.com/channel/UCSQYCc0FrL8CrdIAySmNX0w" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
+
 <!--==========================
 Header Section
 ============================-->
@@ -175,7 +162,7 @@ Header Section
           <li class="menu-active"><a href="#hero">Inicio</a></li>
           <li><a href="#services">Nuestros servicios</a>
             <ul>
-              <li style="background-color: black;"><a style= "font-weight: 700; color:white;" href="https://www.justiexpress.com/login">Crea tu documento</a>
+              <li style="background-color: black;"><a style= "font-weight: 700; color:white;" target="_blank" href="https://justiexpress.web.app/login">Crea tu documento</a>
               <li><a style= "font-weight: 600;" href="reclamaciones.html">Reclamaciones</a></li>
               <li><a style= "font-weight: 600;" href="derechos-de-peticion.html">Derechos de Petición</a></li>
               <li><a style= "font-weight: 600;" href="acciones-de-tutela.html">Acciones de Tutela</a></li>
@@ -318,185 +305,6 @@ Header Section
           <script src="../jquery.counterup.min.js"></script>
     </section>
 
-  <!--==========================
-  Contact Section
-  ============================-->
-  <section id="contact">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">¿Preguntas o comentarios?</h3>
-          <div class="section-title-divider"></div>
-          <br>
-          <h3 class="section-description"style="color: grey;">&#x2709; justiexpress@gmail.com <br><br> &#9742; (+57) 318 5725324 <br><br> <i class="fa fa-whatsapp"> </i> (+57) 318 5725324</h3>
-          <div class="section-title-divider"></div>
-          </div>
-      </div>
-
-    <form name="Contáctanos" id="Contáctanos" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeHgsWAdRkDi7qrdU9BlR2KsoH2VeJrdalpoJMEZeDi9ZG1RQ/formResponse?" target="hidden_iframe" onsubmit="return checkform(this);">
-      <input type="hidden" name="_language" value="es" />
-        <div class="form-group">
-          <label for="entry.1826066633">Nombre:</label>
-          <input type="text" name="entry.1826066633" class="form-control" id="entry.1826066633" placeholder="Nombre Completo..." required />
-          <div class="validation"></div>
-        </div>
-        <div class="form-group">
-          <label for="entry.2100016944">Apellidos:</label>
-          <input type="text" name="entry.2100016944" class="form-control" id="entry.2100016944" placeholder="Apellidos..." required />
-          <div class="validation"></div>
-        </div>
-      <div class="form-group">
-        <label for="entry.1715537891">Correo electrónico:</label>
-        <input type="email" class="form-control" name="entry.1715537891" id="entry.1715537891" placeholder="Correo electrónico..." data-rule="email" required />
-        <div class="validation"></div>
-      </div>
-      <div class="form-group">
-        <label for="entry.815788880">Teléfono de Contacto:</label>
-        <input type="text" class="form-control" name="entry.815788880" id="entry.815788880" placeholder="Opcional ¡Diligéncialo para contactarte a la mayor brevedad posible!" data-rule="email" />
-        <div class="validation"></div>
-      </div>
-      <div class="form-group">
-        <label for="entry.1880611944">Asunto:</label>
-        <input type="text" class="form-control" name="entry.1880611944" id="entry.1880611944" placeholder="Asunto..." required />
-        <div class="validation"></div>
-      </div>
-      <div class="form-group">
-        <label for="entry.917856622">Asunto:</label>
-        <textarea class="form-control" name="entry.917856622" id="entry.917856622" rows="5" data-rule="required" placeholder="Mensaje..." required></textarea>
-        <div class="validation"></div>
-      </div>
-        <input type="checkbox" required><b style="color: grey;"> He leído y aceptado los <a href="terminos-y-condiciones.html">Términos y Condiciones de uso</a></b>
-        <br>
-        <br>
-        <!-- START CAPTCHA -->
-      <div class="capbox">
-
-      <div id="CaptchaDiv"></div>
-
-      </div>
-      <br>
-      <!-- END CAPTCHA -->
-
-      <div class="g-recaptcha" data-sitekey="6LeMj74UAAAAAK9QH2_7vEdFhoC2_gNHWgrGyJTh" data-callback="recaptcha_callback"></div>
-      <div class="buttonHolder">
-      <input type="submit" value= "Enviar mensaje" name="submit" id="submitBtn" disabled="true" class="button"/>
-      </div>
-
-      </form>
-
-    <script type="text/javascript">
-      function checkRecaptcha() {
-          res = $('#g-recaptcha-response').val();
-
-          if (res == "" || res == undefined || res.length == 0)
-              return false;
-          else
-              return true;
-      }
-
-      //...
-
-      $('#frm-signup').submit(function(e) {
-
-          if(!checkRecaptcha()) {
-              $( "#frm-result" ).text("Please validate your reCAPTCHA.");
-              return false;
-          }
-          //...
-      });
-          </script>
-
-      <script type="text/javascript">
-
-      // Captcha Script
-
-      function checkform(theform){
-      var why = "";
-
-      if(theform.CaptchaInput.value == ""){
-      why += "- Ingresa el código CAPTCHA.\n";
-      }
-      if(theform.CaptchaInput.value != ""){
-      if(ValidCaptcha(theform.CaptchaInput.value) == false){
-      why += "- El código CAPTCHA no coincide. Diligencia nuevamente el formulario y asegúrate de ingresar el código correctamente.\n";
-      }
-      }
-      if(why != ""){
-      alert(why);
-      return false;
-      }
-      }
-
-      var a = Math.ceil(Math.random() * 9)+ '';
-      var b = Math.ceil(Math.random() * 9)+ '';
-      var c = Math.ceil(Math.random() * 9)+ '';
-      var d = Math.ceil(Math.random() * 9)+ '';
-      var e = Math.ceil(Math.random() * 9)+ '';
-
-      var code = a + b + c + d + e;
-      document.getElementById("txtCaptcha").value = code;
-      document.getElementById("CaptchaDiv").innerHTML = code;
-
-      // Validate input against the generated number
-      function ValidCaptcha(){
-      var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
-      var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
-      if (str1 == str2){
-      return true;
-      }else{
-      return false;
-      }
-      }
-
-      // Remove the spaces from the entered and generated code
-      function removeSpaces(string){
-      return string.split(' ').join('');
-      }
-      </script>
-
-
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-      <div style="clear: both;"></div>
-
-
-      <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
-      <script type="text/javascript">
-      var submitted = false;
-      </script>
-
-      <script type="text/javascript">
-      $('#Contáctanos').on('submit', function(e) {
-      $('#Contáctanos *').fadeOut(2000);
-      setTimeout("location.href = 'https://www.justiexpress.com/index1.html';",5000);
-      });
-      </script>
-
-        <script>
-            function InvalidMsg(textbox) {
-
-                if (textbox.value === '') {
-                    textbox.setCustomValidity
-                          ('Entering an email-id is necessary!');
-                } else if (textbox.validity.typeMismatch) {
-                    textbox.setCustomValidity
-                          ('Please enter an email address which is valid!');
-                } else {
-                    textbox.setCustomValidity('');
-                }
-
-                return true;
-            }
-        </script>
-
-          </div>
-        </div>
-      </div>
-      </div>
-      </section>
-
 <!--==========================
 Services Section
 ============================-->
@@ -605,22 +413,22 @@ Footer
       <div class="copyright">
        &copy; Copyright Imperial Theme. All Rights Reserved
         <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a target="_blank" href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
 
     </div>
     <div class="col-md-4 service-item">
     <ul id="íconos" class="icons" align: "center">
-    <i><a href="https://es-la.facebook.com/pages/category/Legal-Service/Justiexpress-360447324755280/"
+    <i><a  target="_blank" href="https://es-la.facebook.com/pages/category/Legal-Service/Justiexpress-360447324755280/"
     class="fa fa-facebook-f" style="font-size:48px;color:#fff"></a></i>&nbsp;&nbsp;
-    &emsp;<i><a href="https://twitter.com/justiexpress?lang=es"&nbsp;&nbsp;
+    &emsp;<i><a  target="_blank" href="https://twitter.com/justiexpress?lang=es"&nbsp;&nbsp;
     class="fa fa-twitter" style="font-size:38px;color:#fff"></a></i>&nbsp;&nbsp;
-    &emsp;<i><a href="https://www.linkedin.com/company/justiexpress"
+    &emsp;<i><a  target="_blank" href="https://www.linkedin.com/company/justiexpress"
     class="fa fa-linkedin" style="font-size:38px;color:#fff"></a></i>&nbsp;&nbsp;
-    &emsp;<i><a href="https://www.instagram.com/justiexpress.derechoyeconomia/"
+    &emsp;<i><a  target="_blank" href="https://www.instagram.com/justiexpress.derechoyeconomia/"
     class="fa fa-instagram" style="font-size:38px;color:#fff"></a></i>&nbsp;&nbsp;
-    &emsp;<i><a href="https://www.youtube.com/channel/UCSQYCc0FrL8CrdIAySmNX0w"
+    &emsp;<i><a  target="_blank" href="https://www.youtube.com/channel/UCSQYCc0FrL8CrdIAySmNX0w"
     class="fa fa-youtube" style="font-size:38px;color:#fff"></a></i>&nbsp;&nbsp;
     </ul>
     </div>

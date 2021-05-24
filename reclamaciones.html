@@ -112,27 +112,6 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-  <!-- recaptcha -->
-
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <script>
-  function timestamp() {
-  var response = document.getElementById("g-recaptcha-response");
-  if (response == null || response.value.trim() == "")
-  {
-  var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
-  elems["ts"] = JSON.stringify(new Date().getTime());
-  document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
-  }
-  }
-  setInterval(timestamp, 500);
-  </script>
-  <script type="text/javascript">
-  function recaptcha_callback(){
-  $('.button').prop("disabled", false);
-  }
-  </script>
-
   <!-- Modal -->
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -169,7 +148,7 @@
           <div class="modal-content">
               <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title">Crea tu Reclamación<a href="https://www.justiexpress.com/login"><b><br>AQUÍ</b></h4>
+                  <h4 class="modal-title">Crea tu Reclamación<a target="_blank" href="https://justiexpress.web.app/login"><b><br>AQUÍ</b></h4>
               </div>
               <div class="modal-body">
                     <img src="img/intro2.png" class="img-responsive" alt="imagen"/>
@@ -184,11 +163,11 @@
   </div>
 
   <div class="icon-bar">
-    <a href="https://es-la.facebook.com/pages/category/Legal-Service/Justiexpress-360447324755280/" class="facebook"><i class="fa fa-facebook"></i></a>
-    <a href="https://twitter.com/justiexpress?lang=es" class="twitter"><i class="fa fa-twitter"></i></a>
-    <a href="https://www.linkedin.com/company/justiexpress" class="linkedin"><i class="fa fa-linkedin"></i></a>
-    <a href="https://www.instagram.com/justiexpress.derechoyeconomia/" class="instagram"><i class="fa fa-instagram"></i></a>
-    <a href="https://www.youtube.com/channel/UCSQYCc0FrL8CrdIAySmNX0w" class="youtube"><i class="fa fa-youtube"></i></a>
+    <a target="_blank" href="https://es-la.facebook.com/pages/category/Legal-Service/Justiexpress-360447324755280/" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a target="_blank" href="https://twitter.com/justiexpress?lang=es" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a target="_blank" href="https://www.linkedin.com/company/justiexpress" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a target="_blank" href="https://www.instagram.com/justiexpress.derechoyeconomia/" class="instagram"><i class="fa fa-instagram"></i></a>
+    <a target="_blank" href="https://www.youtube.com/channel/UCSQYCc0FrL8CrdIAySmNX0w" class="youtube"><i class="fa fa-youtube"></i></a>
   </div>
 
 <!--==========================
@@ -206,7 +185,7 @@ Header Section
           <li class="menu-active"><a href="#hero">Inicio</a></li>
           <li><a href="#services">Nuestros servicios</a>
             <ul>
-              <li style="background-color: black;"><a style= "font-weight: 700; color:white;" href="https://www.justiexpress.com/login">Crea tu documento</a>
+              <li style="background-color: black;"><a style= "font-weight: 700; color:white;" target="_blank" href="https://justiexpress.web.app/login">Crea tu documento</a>
               <li><a style= "font-weight: 600;" href="reclamaciones.html">Reclamaciones</a></li>
               <li><a style= "font-weight: 600;" href="derechos-de-peticion.html">Derechos de Petición</a></li>
               <li><a style= "font-weight: 600;" href="acciones-de-tutela.html">Acciones de Tutela</a></li>
@@ -232,7 +211,7 @@ Header Section
   ============================-->
   <div class="color-letra">
     <div class="separador"></div>
-    <h1 class="section-title-servicios"><a href="https://www.justiexpress.com/login" class="btn-services2" style="color: white; font-size:25px">CREA AQUÍ TU RECLAMACIÓN</a></h1><br><br>
+    <h1 class="section-title-servicios"><a target="_blank" href="https://justiexpress.web.app/login" class="btn-services2" style="color: white; font-size:25px">CREA AQUÍ TU RECLAMACIÓN</a></h1><br><br>
     <div class="separador"></div>
 
               <!--==========================
@@ -276,7 +255,7 @@ Header Section
                 <div class="section-title-divider1"></div>
           </div>
           <div class="separador"></div>
-          <h1 class="section-title-servicios"><a href="https://www.justiexpress.com/login" class="btn-services2" style="color: white; font-size:25px">INGRESA A NUESTRA PLATAFORMA</a></h1><br><br>
+          <h1 class="section-title-servicios"><a target="_blank" href="https://justiexpress.web.app/login" class="btn-services2" style="color: white; font-size:25px">INGRESA A NUESTRA PLATAFORMA</a></h1><br><br>
           <div class="separador"></div>
         
   <!--==========================
@@ -387,22 +366,22 @@ Header Section
         <div class="copyright">
          &copy; Copyright Imperial Theme. All Rights Reserved
           <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed by <a target="_blank" href="https://bootstrapmade.com/">BootstrapMade</a>
           </div>
         </div>
 
       </div>
       <div class="col-md-4 service-item">
       <ul id="íconos" class="icons" align: "center">
-      <i><a href="https://es-la.facebook.com/pages/category/Legal-Service/Justiexpress-360447324755280/"
+      <i><a target="_blank" href="https://es-la.facebook.com/pages/category/Legal-Service/Justiexpress-360447324755280/"
       class="fa fa-facebook-f" style="font-size:48px;color:#fff"></a></i>&nbsp;&nbsp;
-      &emsp;<i><a href="https://twitter.com/justiexpress?lang=es"&nbsp;&nbsp;
+      &emsp;<i><a target="_blank" href="https://twitter.com/justiexpress?lang=es"&nbsp;&nbsp;
       class="fa fa-twitter" style="font-size:38px;color:#fff"></a></i>&nbsp;&nbsp;
-      &emsp;<i><a href="https://www.linkedin.com/company/justiexpress"
+      &emsp;<i><a target="_blank" href="https://www.linkedin.com/company/justiexpress"
       class="fa fa-linkedin" style="font-size:38px;color:#fff"></a></i>&nbsp;&nbsp;
-      &emsp;<i><a href="https://www.instagram.com/justiexpress.derechoyeconomia/"
+      &emsp;<i><a target="_blank" href="https://www.instagram.com/justiexpress.derechoyeconomia/"
       class="fa fa-instagram" style="font-size:38px;color:#fff"></a></i>&nbsp;&nbsp;
-      &emsp;<i><a href="https://www.youtube.com/channel/UCSQYCc0FrL8CrdIAySmNX0w"
+      &emsp;<i><a target="_blank" href="https://www.youtube.com/channel/UCSQYCc0FrL8CrdIAySmNX0w"
       class="fa fa-youtube" style="font-size:38px;color:#fff"></a></i>&nbsp;&nbsp;
       </ul>
       </div>
